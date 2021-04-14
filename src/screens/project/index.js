@@ -14,13 +14,13 @@ export default function projectScreen({ route, navigation }) {
       return (
         <CardItem cardBody>
           <Badge info style={{marginRight: 10, borderWidth: 1}}>
-            <Text>BUILDING <Ionicons name='business'/></Text>
+            <Text style={{ fontSize: 8 }}>BUILDING <Ionicons name='business'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text>INFRASTRUCTURE <Ionicons name='build'/></Text>
+            <Text style={{ fontSize: 8 }}>INFRASTRUCTURE <Ionicons name='build'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text>MOTORSPORT <Ionicons name='car-sport'/></Text>
+            <Text style={{ fontSize: 8 }}>MOTORSPORT <Ionicons name='car-sport'/></Text>
           </Badge>
         </CardItem>
       );
@@ -28,13 +28,13 @@ export default function projectScreen({ route, navigation }) {
       return (
         <CardItem cardBody>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text>BUILDING <Ionicons name='business'/></Text>
+            <Text style={{ fontSize: 8 }}>BUILDING <Ionicons name='business'/></Text>
           </Badge>
           <Badge info style={{marginRight: 10, borderWidth: 1}}>
-            <Text>INFRASTRUCTURE <Ionicons name='build'/></Text>
+            <Text style={{ fontSize: 8 }}>INFRASTRUCTURE <Ionicons name='build'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text>MOTORSPORT <Ionicons name='car-sport'/></Text>
+            <Text style={{ fontSize: 8 }}>MOTORSPORT <Ionicons name='car-sport'/></Text>
           </Badge>
         </CardItem>
       );
@@ -42,13 +42,13 @@ export default function projectScreen({ route, navigation }) {
       return (
         <CardItem cardBody>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text>BUILDING <Ionicons name='business'/></Text>
+            <Text  style={{ fontSize: 8 }}>BUILDING <Ionicons name='business'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text>INFRASTRUCTURE <Ionicons name='build'/></Text>
+            <Text  style={{ fontSize: 8 }}>INFRASTRUCTURE <Ionicons name='build'/></Text>
           </Badge>
           <Badge info style={{marginRight: 10, borderWidth: 1}}>
-            <Text>MOTORSPORT <Ionicons name='car-sport'/></Text>
+            <Text style={{ fontSize: 8 }}>MOTORSPORT <Ionicons name='car-sport'/></Text>
           </Badge>
         </CardItem>
       );

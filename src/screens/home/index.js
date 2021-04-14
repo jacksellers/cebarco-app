@@ -25,14 +25,14 @@ export default function homeScreen({ navigation }) {
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.itemContainer} onPress={() => navigation.navigate('Project', item)}>
       <Card>
+        <CardItem cardBody>
+          <Image style={styles.image} source={{ uri: item.image}}></Image>
+        </CardItem>
         <CardItem cardBody style={{padding: 10}}>
           <Text style={{fontWeight: 'bold', color: 'black'}}>{item.name}</Text>
         </CardItem>
         <CardItem cardBody style={{padding: 10, marginBottom: 8}}>
           <Text style={{fontSize: 12, color: 'black'}}>{Moment(item.contract_completion).format('MMM YYYY ')}</Text>
-        </CardItem>
-        <CardItem cardBody>
-          <Image style={styles.image} source={{ uri: item.image}}></Image>
         </CardItem>
       </Card>
     </TouchableOpacity>
