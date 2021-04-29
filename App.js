@@ -61,7 +61,7 @@ export default function App() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-            if (route.name === 'Home') {
+            if (route.name === 'Projects') {
               iconName = 'md-home';
             } else if (route.name === 'News') {
               iconName = 'md-newspaper';
@@ -76,7 +76,7 @@ export default function App() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name='Home' component={HomeStackScreen} />
+        <Tab.Screen name='Projects' component={HomeStackScreen} />
         <Tab.Screen name='News' component={NewsStackScreen} />
         <Tab.Screen name='About' component={AboutStackScreen} />
       </Tab.Navigator>

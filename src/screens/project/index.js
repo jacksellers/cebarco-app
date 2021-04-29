@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Image, Text } from 'react-native';
+import { Platform, StyleSheet, ScrollView, Image, Text } from 'react-native';
 import { Card, CardItem, Left, Right, Badge } from 'native-base';
 import HTMLView from 'react-native-htmlview';
 import Moment from 'moment';
@@ -14,13 +14,13 @@ export default function projectScreen({ route, navigation }) {
       return (
         <CardItem cardBody>
           <Badge info style={{marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>BUILDING <Ionicons name='business'/></Text>
+            <Text style={styles.badge}>BUILDING <Ionicons name='business'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>INFRASTRUCTURE <Ionicons name='build'/></Text>
+            <Text style={styles.badge}>INFRASTRUCTURE <Ionicons name='build'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>MOTORSPORT <Ionicons name='car-sport'/></Text>
+            <Text style={styles.badge}>MOTORSPORT <Ionicons name='car-sport'/></Text>
           </Badge>
         </CardItem>
       );
@@ -28,13 +28,13 @@ export default function projectScreen({ route, navigation }) {
       return (
         <CardItem cardBody>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>BUILDING <Ionicons name='business'/></Text>
+            <Text style={styles.badge}>BUILDING <Ionicons name='business'/></Text>
           </Badge>
           <Badge info style={{marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>INFRASTRUCTURE <Ionicons name='build'/></Text>
+            <Text style={styles.badge}>INFRASTRUCTURE <Ionicons name='build'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>MOTORSPORT <Ionicons name='car-sport'/></Text>
+            <Text style={styles.badge}>MOTORSPORT <Ionicons name='car-sport'/></Text>
           </Badge>
         </CardItem>
       );
@@ -42,13 +42,13 @@ export default function projectScreen({ route, navigation }) {
       return (
         <CardItem cardBody>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text  style={{ fontSize: 8 }}>BUILDING <Ionicons name='business'/></Text>
+            <Text  style={styles.badge}>BUILDING <Ionicons name='business'/></Text>
           </Badge>
           <Badge style={{backgroundColor: 'white', marginRight: 10, borderWidth: 1}}>
-            <Text  style={{ fontSize: 8 }}>INFRASTRUCTURE <Ionicons name='build'/></Text>
+            <Text  style={styles.badge}>INFRASTRUCTURE <Ionicons name='build'/></Text>
           </Badge>
           <Badge info style={{marginRight: 10, borderWidth: 1}}>
-            <Text style={{ fontSize: 8 }}>MOTORSPORT <Ionicons name='car-sport'/></Text>
+            <Text style={styles.badge}>MOTORSPORT <Ionicons name='car-sport'/></Text>
           </Badge>
         </CardItem>
       );
@@ -119,12 +119,15 @@ const styles = StyleSheet.create({
     flex: 1
   },
   title: {
-    fontSize: 16,
+    fontSize: Platform.OS === 'ios' ? 10 : 16,
     fontWeight: 'bold',
     color: 'black'
   },
   text: {
     textAlign: 'right',
-    fontSize: 16
+    fontSize: Platform.OS === 'ios' ? 10 : 16
+  },
+  badge: {
+    fontSize: Platform.OS === 'ios' ? 6 : 12
   }
 });

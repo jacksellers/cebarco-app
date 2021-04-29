@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Image, Linking } from 'react-native';
+import { Platform, StyleSheet, ScrollView, Image, Linking } from 'react-native';
 import { Text, Card, CardItem, Left, Right } from 'native-base';
 import HTMLView from 'react-native-htmlview';
 
@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     flex: 1
   },
   title: {
-    fontSize: 16,
+    fontSize: Platform.OS === 'ios' ? 10 : 16,
     fontWeight: 'bold',
     color: 'black'
   },
   link: {
     textAlign: 'right',
-    fontSize: 16,
+    fontSize: Platform.OS === 'ios' ? 10 : 16,
     color: 'blue'
   }
 });

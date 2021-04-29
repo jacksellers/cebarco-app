@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
+import { Platform, StyleSheet, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { Text, View, Spinner, Card, CardItem } from 'native-base';
 
 import Client from '../../api';
@@ -25,10 +25,10 @@ export default function newsScreen({ navigation }) {
           <Image style={styles.image} source={{ uri: item.image}}></Image>
         </CardItem>
         <CardItem cardBody style={{padding: 10}}>
-          <Text style={{fontWeight: 'bold', textTransform: 'uppercase'}}>{item.title}</Text>
+          <Text style={{fontWeight: 'bold', textTransform: 'uppercase', fontSize: Platform.OS === 'ios' ? 10 : 16}}>{item.title}</Text>
         </CardItem>
         <CardItem cardBody style={{padding: 10, marginBottom: 8}}>
-          <Text>{item.intro}</Text>
+          <Text style={{ fontSize: Platform.OS === 'ios' ? 10 : 16 }}>{item.intro}</Text>
         </CardItem>
       </Card>
     </TouchableOpacity>

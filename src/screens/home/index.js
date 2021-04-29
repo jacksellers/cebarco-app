@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
+import { Platform, StyleSheet, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { Text, View, Spinner, Card, CardItem } from 'native-base';
 import Moment from 'moment';
 
@@ -29,10 +29,10 @@ export default function homeScreen({ navigation }) {
           <Image style={styles.image} source={{ uri: item.image}}></Image>
         </CardItem>
         <CardItem cardBody style={{padding: 10}}>
-          <Text style={{fontWeight: 'bold', color: 'black'}}>{item.name}</Text>
+          <Text style={{fontWeight: 'bold', color: 'black', fontSize: Platform.OS === 'ios' ? 12 : 16}}>{item.name}</Text>
         </CardItem>
         <CardItem cardBody style={{padding: 10, marginBottom: 8}}>
-          <Text style={{fontSize: 12, color: 'black'}}>{Moment(item.contract_completion).format('MMM YYYY ')}</Text>
+          <Text style={{fontSize: Platform.OS === 'ios' ? 8 : 12, color: 'black'}}>{Moment(item.contract_completion).format('MMM YYYY ')}</Text>
         </CardItem>
       </Card>
     </TouchableOpacity>
